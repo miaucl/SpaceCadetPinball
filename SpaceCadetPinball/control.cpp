@@ -3230,7 +3230,7 @@ void control::CosmicPlaguePartTwoController(MessageCode code, TPinballComponent*
 		{
 			table_set_replay(4.0);
 		}
-	MissionControl(MessageCode::ControlMissionComplete, nullptr);
+		MissionControl(MessageCode::ControlMissionComplete, nullptr);
 		mission_text_box->Display(pb::get_rc_string(Msg::STRING242), 4.0);
 		int addedScore = SpecialAddScore(1750000, true);
 		snprintf(Buffer, sizeof Buffer, pb::get_rc_string(Msg::STRING179), addedScore);
@@ -3506,10 +3506,10 @@ void control::MaelstromPartEightController(MessageCode code, TPinballComponent* 
 		lite304->Message(MessageCode::TLightResetAndTurnOff, 0.0);
 		lite130->Message(MessageCode::TLightResetAndTurnOff, 0.0);
 		lite198->MessageField = 1;
-			if (pb::FullTiltMode)
-			{
-				table_set_replay(4.0);
-			}
+		if (pb::FullTiltMode)
+		{
+			table_set_replay(4.0);
+		}
 		MissionControl(MessageCode::ControlMissionComplete, nullptr);
 		int addedScore = SpecialAddScore(5000000, true);
 		snprintf(Buffer, sizeof Buffer, pb::get_rc_string(Msg::STRING179), addedScore);
@@ -4137,7 +4137,7 @@ void control::SecretMissionGreenController(MessageCode code, TPinballComponent* 
 		{
 			table_set_replay(4.0);
 		}
-	MissionControl(MessageCode::ControlMissionComplete, nullptr);
+		MissionControl(MessageCode::ControlMissionComplete, nullptr);
 		mission_text_box->Display(pb::get_rc_string(Msg::STRING246), 4.0);
 		int addedScore = SpecialAddScore(1500000, true);
 		snprintf(Buffer, sizeof Buffer, pb::get_rc_string(Msg::STRING179), addedScore);
@@ -4636,7 +4636,7 @@ void control::TimeWarpPartTwoController(MessageCode code, TPinballComponent* cal
 	{
 		table_set_replay(4.0);
 	}
-MissionControl(MessageCode::ControlMissionComplete, nullptr);
+	MissionControl(MessageCode::ControlMissionComplete, nullptr);
 	// SpecialAddScore sets the score dirty flag. So next tick it will be redrawn.
 }
 
