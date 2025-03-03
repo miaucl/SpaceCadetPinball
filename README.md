@@ -74,8 +74,7 @@ apt update
 sudo apt install libsdl2-dev libsdl2-mixer-dev
 
 cd ../path/to/SpaceCadetPinball
-mkdir build
-cd build
+mkdir build && cd build
 cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++  # gcc
 cmake .. -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++  # clang
 make -j$(nproc)  # Build with all available CPU cores
