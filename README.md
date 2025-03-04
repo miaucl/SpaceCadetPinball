@@ -63,7 +63,7 @@ Download and unpack devel packages for `SDL2` and `SDL2_mixer`.\
 Set paths to them in `CMakeLists.txt`, see suggested placement in `/Libs`.\
 Compile with Visual Studio; tested with 2019.
 
-### On Linux
+### On Debian/Ubuntu
 
 Install devel packages for `SDL2` and `SDL2_mixer`.\
 Compile with CMake; tested with GCC 10, Clang 11.\
@@ -75,9 +75,15 @@ sudo apt install libsdl2-dev libsdl2-mixer-dev
 
 cd ../path/to/SpaceCadetPinball
 mkdir build && cd build
+cmake ..
+make -j$(nproc)  # Build with all available CPU cores
+```
+
+Use one of following commands instead to specify the compilers explicitly:
+
+```sh
 cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++  # gcc
 cmake .. -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++  # clang
-make -j$(nproc)  # Build with all available CPU cores
 ```
 
 [![Packaging status](https://repology.org/badge/tiny-repos/spacecadetpinball.svg)](https://repology.org/project/spacecadetpinball/versions)
